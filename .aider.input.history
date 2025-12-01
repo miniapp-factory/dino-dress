@@ -20,3 +20,107 @@
 
 # 2025-12-01 06:23:22.956692
 +Please do not make the text in a mirror manner and make sure that the pictures or images should load properly
+
+# 2025-12-01 06:39:51.643162
++# **Simplified Mini App Prompt: "Dino Dress-Up Memory Match"** 🦖🦕
++
++## **Core Gameplay**
++A single-screen memory matching game with 12 cards (6 pairs). Simple tap mechanics with cute dinosaur cards wearing funny accessories.
++
++## **Features**
++1. **Basic Grid**: 3×4 grid of face-down cards
++2. **Card Types**: 6 different dino+outfit combinations:
++   - T-Rex wearing sunglasses 🦖😎
++   - Triceratops with party hat 🦕🎉
++   - Stegosaurus in a bow tie 🦕🎀
++   - Pterodactyl with scarf 🦅🧣
++   - Brachiosaurus with top hat 🦕🎩
++   - Velociraptor in rain boots 🦖👢
++
++3. **Simple Interactions**:
++   - Tap card to flip
++   - Match 2 identical cards → they disappear with a cheerful "Dino Roar!"
++   - No match → cards flip back after 1 second
++   - Complete all matches → celebration screen
++
++4. **Minimal UI**:
++   - Moves counter
++   - Restart button
++   - Simple "You Win!" screen
++
++5. **Touch-Friendly**:
++   - Large cards for small fingers
++   - No timers or pressure
++   - Instant restart
++
++## **Technical Requirements**
++- Single HTML file with CSS/JavaScript
++- No external libraries needed
++- Works on mobile & desktop
++- Local storage for best score only
++- < 500 lines of code total
++
++## **Visual Style**
++- Bright, cheerful colors
++- Cartoon dinosaur illustrations
++- Smooth card flip animation
++- No complex backgrounds
++
++## **Sounds** (optional)
++- Simple "flip" sound effect
++- "Match" cheer sound
++- "Win" celebration sound
++
++**Keep it simple, cute, and playable in under 2 minutes per game.**
+
+# 2025-12-01 06:39:51.643940
++# **Simplified Mini App Prompt: "Dino Dress-Up Memory Match"** 🦖🦕
++
++## **Core Gameplay**
++A single-screen memory matching game with 12 cards (6 pairs). Simple tap mechanics with cute dinosaur cards wearing funny accessories.
++
++## **Features**
++1. **Basic Grid**: 3×4 grid of face-down cards
++2. **Card Types**: 6 different dino+outfit combinations:
++   - T-Rex wearing sunglasses 🦖😎
++   - Triceratops with party hat 🦕🎉
++   - Stegosaurus in a bow tie 🦕🎀
++   - Pterodactyl with scarf 🦅🧣
++   - Brachiosaurus with top hat 🦕🎩
++   - Velociraptor in rain boots 🦖👢
++
++3. **Simple Interactions**:
++   - Tap card to flip
++   - Match 2 identical cards → they disappear with a cheerful "Dino Roar!"
++   - No match → cards flip back after 1 second
++   - Complete all matches → celebration screen
++
++4. **Minimal UI**:
++   - Moves counter
++   - Restart button
++   - Simple "You Win!" screen
++
++5. **Touch-Friendly**:
++   - Large cards for small fingers
++   - No timers or pressure
++   - Instant restart
++
++## **Technical Requirements**
++- Single HTML file with CSS/JavaScript
++- No external libraries needed
++- Works on mobile & desktop
++- Local storage for best score only
++- < 500 lines of code total
++
++## **Visual Style**
++- Bright, cheerful colors
++- Cartoon dinosaur illustrations
++- Smooth card flip animation
++- No complex backgrounds
++
++## **Sounds** (optional)
++- Simple "flip" sound effect
++- "Match" cheer sound
++- "Win" celebration sound
++
++**Keep it simple, cute, and playable in under 2 minutes per game.**
