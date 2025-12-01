@@ -1,3 +1,3 @@
-export const title = "Mini App Factory App";
-export const description = "This app was created by the Mini App Factory!";
+export const title = "Dino Memory Match";
+export const description = "A fun memory matching game featuring cute cartoon dinosaurs with silly accessories.";
 export const url = process.env.NEXT_PUBLIC_URL;
