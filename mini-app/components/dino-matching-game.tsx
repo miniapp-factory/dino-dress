@@ -66,17 +66,17 @@ export default function DinoMatchingGame() {
           onClick={() => handleClick(index)}
         >
           <div
-            className={`absolute inset-0 rounded-lg transition-transform duration-300`}
+            className={`absolute inset-0 rounded-lg transition-transform duration-300 backface-visibility-hidden`}
           >
             {/* Back side */}
-            <div className="w-full h-full bg-gray-300 rounded-lg flex items-center justify-center">
+            <div className="w-full h-full bg-gray-300 rounded-lg flex items-center justify-center backface-visibility-hidden">
               <span className="text-2xl">🦕</span>
             </div>
             {/* Front side */}
             <div
               className={`absolute inset-0 rounded-lg bg-white flex items-center justify-center transform ${
                 flipped.includes(index) ? "rotate-y-180" : ""
-              }`}
+              } backface-visibility-hidden`}
             >
               <img
                 src={card.image}
@@ -89,4 +89,8 @@ export default function DinoMatchingGame() {
       ))}
     </div>
   );
+  <style jsx>{`
+    .rotate-y-180 { transform: rotateY(180deg); }
+    .backface-visibility-hidden { backface-visibility: hidden; }
+  `}</style>
 }
