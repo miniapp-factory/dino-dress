@@ -68,6 +68,14 @@ export default function DinoMatchingGame() {
     }
   };
 
+  const restart = () => {
+    initCards();
+    setFlipped([]);
+    setMatched(new Set());
+    setMoves(0);
+    setWin(false);
+  };
+
   return (
     <>
       <div className="grid grid-cols-4 gap-4 mt-6">
