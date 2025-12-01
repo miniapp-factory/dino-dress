@@ -25,12 +25,18 @@ export default function DinoMatchingGame() {
   const [cards, setCards] = useState<Card[]>([]);
   const [flipped, setFlipped] = useState<number[]>([]);
   const [matched, setMatched] = useState<Set<number>>(new Set());
+  const [moves, setMoves] = useState(0);
+  const [win, setWin] = useState(false);
 
-  useEffect(() => {
+  const initCards = () => {
     const shuffled = [...baseCards, ...baseCards]
       .map((card, index) => ({ ...card, id: index }))
       .sort(() => Math.random() - 0.5);
     setCards(shuffled);
+  };
+
+  useEffect(() => {
+    initCards();
   }, []);
 
   const handleClick = (index: number) => {
@@ -38,12 +44,19 @@ export default function DinoMatchingGame() {
 
     const newFlipped = [...flipped, index];
     setFlipped(newFlipped);
+    setMoves((prev) => prev + 1);
 
     if (newFlipped.length === 2) {
       const [first, second] = newFlipped;
       if (cards[first].name === cards[second].name) {
         // Match found
-        setMatched((prev) => new Set([...prev, first, second]));
+        setMatched((prev) => {
+          const newSet = new Set([...prev, first, second]);
+          if (newSet.size === cards.length) {
+            setWin(true);
+          }
+          return newSet;
+        });
         // Play a short sound
         const audio = new Audio("/yay.mp3");
         audio.play();
