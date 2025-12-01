@@ -56,41 +56,46 @@ export default function DinoMatchingGame() {
   };
 
   return (
-    <div className="grid grid-cols-4 gap-4 mt-6">
-      {cards.map((card, index) => (
-        <div
-          key={card.id}
-          className={`relative w-24 h-24 rounded-lg shadow-md cursor-pointer ${
-            matched.has(index) ? "opacity-0 pointer-events-none" : ""
-          }`}
-          onClick={() => handleClick(index)}
-        >
+    <>
+      <div className="grid grid-cols-4 gap-4 mt-6">
+        {cards.map((card, index) => (
           <div
-            className={`absolute inset-0 rounded-lg transition-transform duration-300 backface-visibility-hidden`}
+            key={card.id}
+            className={`relative w-24 h-24 rounded-lg shadow-md cursor-pointer ${
+              matched.has(index) ? "opacity-0 pointer-events-none" : ""
+            }`}
+            style={{ perspective: "1000px" }}
+            onClick={() => handleClick(index)}
           >
-            {/* Back side */}
-            <div className="w-full h-full bg-gray-300 rounded-lg flex items-center justify-center backface-visibility-hidden">
-              <span className="text-2xl">🦕</span>
-            </div>
-            {/* Front side */}
             <div
-              className={`absolute inset-0 rounded-lg bg-white flex items-center justify-center transform ${
-                flipped.includes(index) ? "rotate-y-180" : ""
-              } backface-visibility-hidden`}
+              className={`absolute inset-0 rounded-lg transition-transform duration-300 backface-visibility-hidden`}
+              style={{ transformStyle: "preserve-3d" }}
             >
-              <img
-                src={card.image}
-                alt={card.name}
-                className="w-20 h-20 object-contain"
-              />
+              {/* Back side */}
+              <div className="w-full h-full bg-gray-300 rounded-lg flex items-center justify-center backface-visibility-hidden">
+                <span className="text-2xl">🦕</span>
+              </div>
+              {/* Front side */}
+              <div
+                className={`absolute inset-0 rounded-lg bg-white flex items-center justify-center transform ${
+                  flipped.includes(index) ? "rotate-y-180" : ""
+                } backface-visibility-hidden`}
+                style={{ backfaceVisibility: "hidden" }}
+              >
+                <img
+                  src={card.image}
+                  alt={card.name}
+                  className="w-20 h-20 object-contain"
+                />
+              </div>
             </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+      <style jsx>{`
+        .rotate-y-180 { transform: rotateY(180deg); }
+        .backface-visibility-hidden { backface-visibility: hidden; }
+      `}</style>
+    </>
   );
-  <style jsx>{`
-    .rotate-y-180 { transform: rotateY(180deg); }
-    .backface-visibility-hidden { backface-visibility: hidden; }
-  `}</style>
 }
