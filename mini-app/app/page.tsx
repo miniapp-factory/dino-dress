@@ -13,8 +13,4 @@ export default function Home() {
       <DinoMatchingGame />
     </main>
   );
-  <style jsx>{`
-    .rotate-y-180 { transform: rotateY(180deg); }
-    .backface-visibility-hidden { backface-visibility: hidden; }
-  `}</style>
 }
