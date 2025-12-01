@@ -66,9 +66,7 @@ export default function DinoMatchingGame() {
           onClick={() => handleClick(index)}
         >
           <div
-            className={`absolute inset-0 rounded-lg transition-transform duration-300 ${
-              flipped.includes(index) ? "rotate-y-180" : ""
-            }`}
+            className={`absolute inset-0 rounded-lg transition-transform duration-300`}
           >
             {/* Back side */}
             <div className="w-full h-full bg-gray-300 rounded-lg flex items-center justify-center">
@@ -76,7 +74,9 @@ export default function DinoMatchingGame() {
             </div>
             {/* Front side */}
             <div
-              className={`absolute inset-0 rounded-lg bg-white flex items-center justify-center transform rotate-y-180`}
+              className={`absolute inset-0 rounded-lg bg-white flex items-center justify-center transform ${
+                flipped.includes(index) ? "rotate-y-180" : ""
+              }`}
             >
               <img
                 src={card.image}
